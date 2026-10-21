@@ -1,25 +1,77 @@
 aid: cdnetworks
+
 name: CDNetworks
-description: 'CDNetworks is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'CDNetworks is a global content delivery network (CDN) and cloud services provider that delivers high‑performance, secure, and reliable web content, video, and applications to end‑users worldwide. Founded in 2000, the company operates an extensive edge network spanning over 200 points of presence across the Americas, Europe, Asia‑Pacific, and the Middle East. CDNetworks offers solutions for web acceleration, DDoS protection, web application firewall, and edge computing, helping enterprises improve latency, availability, and security for their digital assets. Their platform supports a range of industries, including media, e‑commerce, gaming, and SaaS, and integrates with major cloud providers to provide hybrid delivery models.'
+
 url: https://raw.githubusercontent.com/api-evangelist/cdnetworks/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
-- Company
-apis: []
+- CDN
+- Cloud Services
+- Web Acceleration
+- DDoS Protection
+- Edge Computing
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/cdnetworks-llms.txt
+- type: Hosts
+  url: hosts/cdnetworks-hosts.yml
+- type: SDKs
+  url: packages/cdnetworks-packages.yml
+- type: Packages
+  url: packages/cdnetworks-packages.yml
+- type: TermsOfService
+  url: https://docs.cdnetworks.com/en/legal/docs/terms-of-service
+- type: ChangeLog
+  url: https://docs.cdnetworks.com/en/cdn/docs/release-notes
+- type: APIReference
+  url: https://docs.cdnetworks.com/en/cdn/apidocs
+- type: GettingStarted
+  url: https://docs.cdnetworks.com/en/cdn/docs/getting-started
+- type: Documentation
+  url: https://docs.cdnetworks.com/
 - type: DomainSecurity
   url: security/cdnetworks-domain-security.yml
 - type: Website
   url: https://cdnetworks.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-20'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://cdnetworks.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
